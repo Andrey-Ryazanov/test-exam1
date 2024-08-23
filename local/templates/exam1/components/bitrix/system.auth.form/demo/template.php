@@ -43,7 +43,7 @@ if($arResult["FORM_TYPE"] == "login")
 					<input type="password" placeholder="<?=GetMessage("AUTH_PASSWORD")?>" name="USER_PASSWORD" maxlength="50" size="17" autocomplete="off" />			
 				</div>
 				<div class="frm-row">
-					<a href="<?=$arResylt["AUTH_FORGOT_PASSWORD_URL"]?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
+					<a href="<?=$arParams['FORGOT_PASSWORD_URL']?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
 				</div>
 				<?if ($arResult["CAPTCHA_CODE"]):?>
 					<tr>
@@ -80,7 +80,7 @@ if($arResult["FORM_TYPE"] == "login")
 					</tr>
 				<?endif?>
 			</form></li>
-		<li><a href="<?=$arResult['AUTH_REGISTER_URL']?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
+		<li><a href="<?=$arParams['REGISTER_URL']?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	</ul>
 </nav>
 <?if($arResult["AUTH_SERVICES"]):?>
@@ -106,7 +106,7 @@ else
 	<nav class="menu-block">
 		<ul>
 			<li>
-				<a href="<?=$arResult["PROFILE_URL"]?>">
+				<a href="<?=$arParams["PROFILE_URL"]?>">
 					<?=$arResult["USER_NAME"]?>
 					[<?=$arResult["USER_LOGIN"]?>]</a>
 			</li>

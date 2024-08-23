@@ -12,12 +12,6 @@
     <?=$APPLICATION->ShowHead(); ?>
     <? 
         use Bitrix\Main\Page\Asset;
-        Asset::getInstance()->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
-        Asset::getInstance()->addString('<meta charset="utf-8" />');
-        Asset::getInstance()->addString('<meta name="keywords" content="">');
-        Asset::getInstance()->addString('<meta name="description" content="">');
-        Asset::getInstance()->addString('<meta name="author" content="">');
-        Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
 
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/reset.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style.css');
@@ -105,7 +99,7 @@
                     <div class="cnt">
                         <? if ($APPLICATION->GetCurDir() != "/"):?>
                             <header>
-                                <h1><?$APPLICATION->ShowTitle();?><?$APPLICATION->ShowProperty();?></h1>
+                                <h1><?$APPLICATION->ShowTitle(true);?></h1>
                             </header>
                             <hr>
                         <? else: ?>
