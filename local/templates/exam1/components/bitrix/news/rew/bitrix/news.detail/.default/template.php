@@ -36,8 +36,8 @@ $this->setFrameMode(true);
 <?if (isset($arResult["DOCUMENTS"])): ?>
 	<div class="exam-review-doc">
 		<p><?=GetMessage('DOCUMENTS')?>:</p>
-		<div class="exam-review-item-doc">
 		<? foreach ($arResult['DOCUMENTS'] as $doc):?>
+		<div class="exam-review-item-doc">
 			<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png">
 			<a href="<?=$doc['SRC']?>" download>
 				<?=$doc['NAME']?>
