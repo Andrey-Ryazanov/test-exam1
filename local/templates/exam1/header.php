@@ -63,22 +63,24 @@
         </header>
         <!-- /header -->
         <?$APPLICATION->IncludeComponent(
-            "bitrix:menu",
-            "vertical_multilevel_exam",
-            Array(
-                "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "left",
-                "COMPONENT_TEMPLATE" => "vertical_multilevel",
-                "DELAY" => "N",
-                "MAX_LEVEL" => "3",
-                "MENU_CACHE_GET_VARS" => "",
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_TYPE" => "N",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "ROOT_MENU_TYPE" => "top",
-                "USE_EXT" => "N"
-            )
-        );?><br>               
+	"bitrix:menu", 
+	"vertical_multilevel_exam", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"COMPONENT_TEMPLATE" => "vertical_multilevel_exam",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "Y"
+	),
+	false
+);?><br>               
         <? if ($APPLICATION->GetCurDir() != "/"):?>
         <!-- breadcrumbs -->
         <div class="breadcrumbs-box">
